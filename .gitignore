@@ -1,0 +1,4 @@
+firmware/.pio/ # Downloaded compilers and compiled firmware
+backend/target/ # compiled java classes and Jars
+frontend/node_modules/ # Downloaded js depens 
+.env # passwords n secrets (like api and db passwords)
