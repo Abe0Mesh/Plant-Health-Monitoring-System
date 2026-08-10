@@ -1,5 +1,9 @@
 Hellooooooooo lovleyyyy world, im starting a project using my arduino to help me track the health of plants so I can grow food without it going bad :D
 
+# i keep forgetting the cmd so just gonna leave it here 
+psql -h YOUR_RDS_ENDPOINT -p 5432 -U YOUR_USERNAME -d postgres
+
+I'm using jpa and hibernate to automate SQL work, also I decided to make a DB on AWS because I learned its free and kinda wanted to try it ou
 
 # all my maven cmds
 

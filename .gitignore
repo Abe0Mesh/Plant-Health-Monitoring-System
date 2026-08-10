@@ -2,3 +2,4 @@ firmware/.pio/ # Downloaded compilers and compiled firmware
 backend/target/ # compiled java classes and Jars
 frontend/node_modules/ # Downloaded js depens 
 .env # passwords n secrets (like api and db passwords)
+backend/src/main/resources/application.properties # sorry u cant see my db password :D

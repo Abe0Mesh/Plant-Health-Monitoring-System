@@ -7,7 +7,7 @@ public class SerialReader {
     private SerialPort port; 
 
     public SerialReader() {
-        this.port = initializePortConnection("/dev/cu.usbmodem11101");// add comm name when finding it 
+        this.port = initializePortConnection("/dev/cu.usbmodem1101");// add comm name when finding it 
     }
 
     public SerialPort getPortObj(){

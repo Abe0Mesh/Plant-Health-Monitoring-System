@@ -7,7 +7,7 @@ DHT HT(sensePin, Type);
 float humidity;
 float tempC;
 float tempF;
-int setTime = 500;
+int setTime = 1000;
 int dt = 1000;
 
 
@@ -25,12 +25,12 @@ void loop() {
   tempC = HT.readTemperature();
   tempF = HT.readTemperature(true);
 
-  Serial.print("Humidity: ");
+  Serial.print("Data:");
   Serial.print(humidity);
-  Serial.print(" C: ");
-  Serial.print(tempC);
-  Serial.print(" F: ");
-  Serial.println(tempF);
+  Serial.print(",");
+  Serial.print(tempF);
+  Serial.print(",");
+  Serial.println(tempC);
   delay(dt);
 
 }
