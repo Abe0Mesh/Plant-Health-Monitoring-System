@@ -26,4 +26,24 @@ public class PlantReading {
         this.Fahrenheit = tempF;
         this.Celsius = tempC;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public double getHumidity(){
+        return Humidity;
+    }
+
+    public double getFahrenheit(){
+        return Fahrenheit;
+    }
+
+    public double getCelsius(){
+        return Celsius;
+    }
+
+    public String getRecorded_At() {
+        return recorded_at;
+    }
 }

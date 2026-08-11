@@ -1,29 +1,73 @@
-Hellooooooooo lovleyyyy world, im starting a project using my arduino to help me track the health of plants so I can grow food without it going bad :D
+# Plant Health Monitor 
 
-# i keep forgetting the cmd so just gonna leave it here 
-psql -h YOUR_RDS_ENDPOINT -p 5432 -U YOUR_USERNAME -d postgres
+A full-stack plant monitoring system that collects environmental sensor data, stores readings in a cloud-hosted PostgreSQL database, and displays live plant data through a dashboard.
 
-I'm using jpa and hibernate to automate SQL work, also I decided to make a DB on AWS because I learned its free and kinda wanted to try it ou
+Now my plants will never die!
 
-# all my maven cmds
+## Tech Stack
 
+| Layer       | Technologies               |
+| ----------- | -------------------------- |
+| Hardware    | Arduino, C++               |
+| Backend     | Java, Spring Boot          |
+| API         | REST, JSON                 |
+| Database    | PostgreSQL                 |
+| Cloud       | AWS RDS                    |
+| Data Access | Spring Data JPA, Hibernate |
+| Frontend    | React, JavaScript, CSS     |
+
+## Project Structure
+
+```text
+plant-health-monitor/
+├── frontend/     # React dashboard
+├── backend/      # Spring Boot API and data processing
+└── hardware/     # Arduino sensor code
+```
+
+## How It Works
+
+```text
+Arduino → Spring Boot → PostgreSQL (AWS RDS) → REST API → React
+```
+
+Sensor readings are collected by the Arduino and processed by the Spring Boot backend before being stored in PostgreSQL. The React frontend polls the REST API for the latest readings and updates the dashboard.
+
+## Running Locally
+
+### Backend
+
+```bash
+cd backend
 ./mvnw spring-boot:run
-# Compile and start the Spring application locally.
+```
 
-./mvnw test
-# Run all automated tests.
+The Spring Boot API runs on:
 
-./mvnw package
-# Compile, test, and create an executable JAR inside target/.
+```text
+http://localhost:8080
+```
 
-./mvnw clean
-# Delete previously compiled files from target/.
+### Frontend
 
-./mvnw clean package
-# Rebuild the entire application from scratch.
+In a separate terminal:
 
-java -jar target/backend-0.0.1-SNAPSHOT.jar
-# Run the packaged application without Maven.
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-./mvnw dependency:tree
-# Display all project dependencies and their relationships.
+Vite will display the local URL for the React application, typically:
+
+```text
+http://localhost:5173
+```
+
+### Hardware
+
+Upload the Arduino program from the `hardware` directory to the connected microcontroller.
+
+Start the backend after connecting the device so the application can read incoming serial data.
+
+
