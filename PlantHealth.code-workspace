@@ -12,6 +12,10 @@
         },
         {
             "path": "frontend"
+        },
+        {
+            "name": "ESP32",
+            "path": "ESP32"
         }
     ]
 }
